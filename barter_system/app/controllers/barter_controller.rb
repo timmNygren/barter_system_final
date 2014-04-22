@@ -1,0 +1,2 @@
+class BarterController < ApplicationController
+end
