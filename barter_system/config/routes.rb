@@ -1,4 +1,6 @@
 BarterSystem::Application.routes.draw do
+  resources :barters
+
   get "welcome/index"
   get "welcome/about"
   get "welcome/contact"
