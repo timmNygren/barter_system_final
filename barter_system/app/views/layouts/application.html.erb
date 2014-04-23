@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>BarterSystem</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+    <div id = "wrap">
+        <!-- Justified Nav -->
+        <div class="container">
+            <div class="masthead">
+                <h3 class="text-muted">MINES Barter System</h3>
+                <ul class="nav nav-justified">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Sign In</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Page Content -->
+        <div class="container">
+            <%= yield %>
+        </div>        
+    </div>
+    <div id="footer">
+        <div class="container">
+        <p class="text-muted credit"><a href="http://eecs.mines.edu/Courses/csci446/">Final Project of CSCI446 Web Application</a> by Hunter Lang, Timothy Nygren and Wenjun Ji</p>
+        </div>
+    </div>
 </body>
 </html>
+
