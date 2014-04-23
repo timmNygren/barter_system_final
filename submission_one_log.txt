@@ -1,0 +1,114 @@
+commit 18f24529b52eddf9053437d93b1e18d66ce02568
+Merge: dbf7218 a0b1859
+Author: xiaji <jwjwei@gmail.com>
+Date:   Tue Apr 22 21:52:13 2014 -0600
+
+    Merge branch 'master' of https://github.com/timmNygren/barter_system_final
+
+commit dbf7218d0c9f955ce4d81fe59b8d5d3a540a8c32
+Author: xiaji <jwjwei@gmail.com>
+Date:   Tue Apr 22 21:51:40 2014 -0600
+
+    edit thumbnail img
+
+commit a0b18592258e65451cae7f51977cf832330ebabf
+Author: Hunter Lang <hunter@orbotix.com>
+Date:   Tue Apr 22 21:36:35 2014 -0600
+
+    Added a bunch of barter seeds.
+
+commit fad7f6e8bddd0729d754e45948ad347eaa332cb9
+Author: Timm Nygren <metroid3prime@yahoo.com>
+Date:   Tue Apr 22 20:50:24 2014 -0600
+
+    Removed 'sell' buttons since this is a barter app. Added some users to the seeds file to test.
+
+commit 0b7c1c521332c5a383b436871dd7de32d8a8a878
+Author: Timm Nygren <metroid3prime@yahoo.com>
+Date:   Tue Apr 22 20:25:16 2014 -0600
+
+    removed scaffold since css is setup elsewhere. Added simple css for alerts and notices
+
+commit 829f64b044f130aee9019be1b91d491994a55b13
+Merge: af77ead d74b322
+Author: Timm Nygren <metroid3prime@yahoo.com>
+Date:   Tue Apr 22 20:01:10 2014 -0600
+
+    Merge branch 'master' of https://github.com/timmNygren/barter_system_final
+    
+    Conflicts:
+    	barter_system/app/views/welcome/index.html.erb
+    	barter_system/config/routes.rb
+    	barter_system/db/schema.rb
+
+commit af77ead48f3f8044902bfac85c7928ebd1cab2c9
+Author: Timm Nygren <metroid3prime@yahoo.com>
+Date:   Tue Apr 22 19:59:11 2014 -0600
+
+    Users, can sign in and out, can use Sign up today button to create new user
+
+commit d74b32226eb6589a2f2e20125738459fb01bdc74
+Author: Hunter Lang <hunter@orbotix.com>
+Date:   Tue Apr 22 19:42:04 2014 -0600
+
+    Typo.
+
+commit 2441d77d80e7c5b8535b994a3ddf4a3b33d182b1
+Author: Hunter Lang <hunter@orbotix.com>
+Date:   Tue Apr 22 19:38:26 2014 -0600
+
+    Home now actually takes the user home.
+
+commit 2fbbdc5fd6ea642d02e62f86766dfe0d47abf4e3
+Author: Hunter Lang <hunter@orbotix.com>
+Date:   Tue Apr 22 19:33:39 2014 -0600
+
+    Added in the scaffold for the barter model. These will represent a trade, either in progress, or completed and are stored in the database.
+
+commit 48746ea33fd45c3d9cad75adc955400e9e3588e5
+Author: Timm Nygren <metroid3prime@yahoo.com>
+Date:   Tue Apr 22 19:18:12 2014 -0600
+
+    Added a root route 'index' and removed application.css to remove circular dependency.
+
+commit 5fee30e940df2f89ab9e714862d0a09496991d72
+Author: xiaji <jwjwei@gmail.com>
+Date:   Tue Apr 22 18:38:53 2014 -0600
+
+    generate controller welcome & update index
+
+commit 2b3c1de21d5ab35acad6fccb3f1f6b4b85831e9d
+Author: Hunter Lang <hunter@orbotix.com>
+Date:   Tue Apr 22 00:51:10 2014 -0600
+
+    Deleted another redundant controller
+
+commit 36d61d36514a57f1f6ab72a54b4302ecd8f60cbd
+Author: Hunter Lang <hunter@orbotix.com>
+Date:   Tue Apr 22 00:46:18 2014 -0600
+
+    Removed redundant controller.
+
+commit 0aa689d71bb10d7dab16084df421193bb1dbe25d
+Author: Hunter Lang <hunter@orbotix.com>
+Date:   Mon Apr 21 22:52:31 2014 -0600
+
+    Added the controllers for the app. Did not include controllers for the login system, as this will probably be handled by a gem.
+
+commit 72253c4d1875aca5a2cdcdfceaec4031fe51c0d2
+Author: Timm Nygren <metroid3prime@yahoo.com>
+Date:   Mon Apr 21 20:18:20 2014 -0600
+
+    PDF of a basic flow idea
+
+commit dfbd82ebdf664695f7a4602547c5181170551b63
+Author: Timm Nygren <metroid3prime@yahoo.com>
+Date:   Mon Apr 21 19:19:39 2014 -0600
+
+    created new barter_system rails application skeleton
+
+commit eb2f91ba1b0285a02725fe2d51413655ae825b3e
+Author: timmNygren <metroid3prime@yahoo.com>
+Date:   Sun Apr 20 21:58:30 2014 -0700
+
+    Initial commit
