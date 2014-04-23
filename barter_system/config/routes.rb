@@ -1,5 +1,8 @@
 BarterSystem::Application.routes.draw do
+
   devise_for :users
+  resources :barters
+  
   get "welcome/index"
   get "welcome/about"
   get "welcome/contact"
