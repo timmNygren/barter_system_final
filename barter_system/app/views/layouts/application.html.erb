@@ -9,15 +9,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+    <% if notice %>
+    <p class="notice"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+    <p class="alert"><%= alert %></p>
+    <% end %>
     <div id = "wrap">
         <!-- Justified Nav -->
         <div class="container">
             <div class="masthead">
                 <h3 class="text-muted">MINES Barter System</h3>
                 <ul class="nav nav-justified">
-                <li><a href="#">Home</a></li>
+                <li><%= link_to "Home", index_path %></li>
                 <li><a href="#">Services</a></li>
-                <li><a href="#">Sign In</a></li>
+                <% if user_signed_in? %>
+                <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+                <% else %>
+                <li><%= link_to "Sign In", new_user_session_path %></li>
+                <% end %>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
                 </ul>

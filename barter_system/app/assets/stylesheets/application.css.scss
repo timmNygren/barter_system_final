@@ -18,6 +18,14 @@ $text-muted: #2cb9ed;
 @import "bootstrap";
 @import "bootstrap/theme";
 
+.notice {
+  color: green;
+}
+
+.alert {
+  color: red;
+}
+
 html {
   overflow-y: scroll;
 }
