@@ -1,0 +1,155 @@
+<div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar begins -->
+            <div class="col-sm-3 col-md-2 sidebar">
+                <div id="sidebar-nav">
+                    <div id="accounts-menu" class="list-group">
+                        <a href="#" class="list-group-item active">
+                            <span class="glyphicon glyphicon-user"></span> UserName
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-envelope"></span> Edit Profile
+                        </a>
+                        <div class = "dropdown">
+                             <a href="#" class="list-group-item" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-exclamation-sign"></span>
+                            Notifications <span class = "badge"> 10 </span>
+                                 <!--div id ="notice">
+                                 <span class = "badge"> 10 </span>
+                                 <!--span class="caret"></span-->
+                            </a>                            
+                        </div>                  
+                    </div>
+                    <br>
+                    <div id="barter-menu">
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-search"></span> Search
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-home"></span> Barter System
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-check"></span> Bidding Items
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-share"></span> Selling Items
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-bullhorn"></span> Swaping Rules
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-tower"></span> Community
+                        </a>
+                    </div>
+                </div>
+            </div><!-- Sidebar ends -->
+            <!-- content begins -->
+            <div class="col-sm-10">
+                <div id="mySystem">
+                    <div class="panel panel-primary widget">
+                        <div class="panel-heading">
+                            <span class="glyphicon glyphicon-comment"></span> Recent Messages
+                        </div>
+                        <div class="panel-body" id="messages">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <%= image_tag('books.jpg', class: "img-rounded") %>
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <h4 class="list-group-item-heading">ItemName you bidded for</h4>
+    <p class="list-group-item-text">Username accepted your offer.</p>
+                                        </div>
+                                        <div class="action">
+                                            <button type="button" class="btn btn-primary btn-sm">
+                                            <span class="glyphicon glyphicon-ok"></span> Read
+                                            </button>
+                                            <button type="button" class="btn btn-danger btn-sm" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip">
+                                            <span class="glyphicon glyphicon-trash"></span> Delete
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <%= image_tag('books.jpg', class: "img-rounded") %>
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <h4 class="list-group-item-heading">ItemName you sold</h4>
+    <p class="list-group-item-text">Username bidded your offer.</p>
+                                        </div>
+                                        <div class="action">
+                                            <button type="button" class="btn btn-primary btn-sm">
+                                            <span class="glyphicon glyphicon-ok"></span> Read
+                                            </button>
+                                            <button type="button" class="btn btn-danger btn-sm" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip">
+                                            <span class="glyphicon glyphicon-trash"></span> Delete
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <%= image_tag('books.jpg', class: "img-rounded") %>
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <h4 class="list-group-item-heading">ItemName you sold</h4>
+    <p class="list-group-item-text">Username bidded your offer.</p>
+                                        </div>
+                                        <div class="action">
+                                            <button type="button" class="btn btn-primary btn-sm">
+                                            <span class="glyphicon glyphicon-ok"></span> Read
+                                            </button>
+                                            <button type="button" class="btn btn-danger btn-sm" tdata-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip">
+                                            <span class="glyphicon glyphicon-trash"></span> Delete
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>                   
+                            </ul>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="row">
+                                <div class="col-md-offset-5 col-md-3">
+                                    <h4>Total Count <span class="label label-info">25</span></h4>
+                                </div>
+                                <div class="col-md-4">
+                                    <ul class="pagination pull-right">
+                                        <li class="disabled"><a href="#">&laquo;</a></li>
+                                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">&raquo;</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- content ends -->
+            <!-- modal detele starts -->
+            <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title custom_align" id="Heading">Delete this message</h4>
+                        </div>
+                    <div class="modal-body">
+                        <div class="alert alert-warning"><span class="glyphicon glyphicon-warning-sign"></span> Are you sure you want to delete this Message?
+                        </div>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-danger" ><span class="glyphicon glyphicon-ok-sign"></span> Yes</button>
+                        <button type="button" class="btn btn-warning" ><span class="glyphicon glyphicon-remove"></span> No</button>
+                    </div>
+                    </div>
+                </div>
+            </div><!-- modal detele ends -->
+        </div>
+</div>

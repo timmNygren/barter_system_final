@@ -12,7 +12,7 @@
     float: right;
 }*/
 
-
+/* Profile CSS starts*/
 #timeline {
   list-style: none;
   position: relative;
@@ -144,7 +144,9 @@
             }
         }
 }
+/* Profile CSS Ends*/
 
+/* All files in Admin Using this starts*/
 #mySystem {
     margin-top: 10px;
 }
@@ -172,7 +174,9 @@
         }
     
 }
+/* All files in Admin Using this ends*/
 
+/*Barter System Nav-Tab*/
 #myTab.nav.nav-tabs {
     li {
         a {
@@ -257,10 +261,7 @@
     height: 140px;
 }
 
-#actionButton .btn.btn-default.btn-sm.dropdown-toggle {
-    margin-top: -5px;
-}
-
+/*Selling&Bidding Items Table*/
 #bidding-table .media {
     img {
     width: 100px;
@@ -277,4 +278,18 @@
     p {
         font-size: 13px;
     }
+}
+
+/* Notifications*/
+#messages {
+    img.img-rounded {
+        width: 150px;
+        height: 100px;       
+    }
+}
+
+#messages.panel-body .action{
+    width: 150px;
+    margin-top: 70px;
+    margin-left: 235px;
 }
