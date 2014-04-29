@@ -65,4 +65,25 @@ h3{
     height: 250px;
 }
 
+/*about page*/
+#hunterabout a{
+    color: $gray-darker;
+            &:hover {
+                color: $brand-primary;
+           } 
+}
+
+#timabout a {
+    color: $gray-darker;
+            &:hover {
+                color: $brand-success;
+           } 
+}
+
+#jiabout a {
+    color: $gray-darker;
+            &:hover {
+                color: $brand-danger;
+           } 
+}
 
