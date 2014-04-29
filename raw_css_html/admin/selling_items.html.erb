@@ -1,0 +1,262 @@
+<div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar begins -->
+            <div class="col-sm-3 col-md-2 sidebar">
+                <div id="sidebar-nav">
+                    <div id="accounts-menu" class="list-group">
+                        <a href="#" class="list-group-item active">
+                            <span class="glyphicon glyphicon-user"></span> UserName
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-envelope"></span> Edit Profile
+                        </a>
+                        <div class = "dropdown">
+                             <a href="#" class="list-group-item" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-exclamation-sign"></span>
+                            Notifications <span class = "badge"> 10 </span>
+                                 <!--div id ="notice">
+                                 <span class = "badge"> 10 </span>
+                                 <!--span class="caret"></span-->
+                            </a>                            
+                        </div>                  
+                    </div>
+                    <br>
+                    <div id="barter-menu">
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-search"></span> Search
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-home"></span> Barter System
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-check"></span> Bidding Items
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-share"></span> Selling Items
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-bullhorn"></span> Swaping Rules
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-tower"></span> Community
+                        </a>
+                    </div>
+                </div>
+            </div><!-- Sidebar ends -->
+            <!-- content begins -->
+            <div class="col-sm-10">
+                <div id="mySystem">
+                    <div class="panel panel-primary">
+                    <!--panel contents -->
+                        <div class="panel-heading">
+                            <span class="glyphicon glyphicon-list"></span> Selling Lists
+                        </div>
+                        <div class="panel-body">
+                            <div class = "col-md-4">
+                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-plus"></span> <a>Add New Selling Items</a></button>
+                            </div>
+                            <div class = "col-md-offset-1 col-md-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="test" placeholder="Search">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Table -->
+                        <table class="table table-hover" id="bidding-table">
+                            <thead>
+                                <th>Selling Items</th>
+                                <th>Bidders</th>
+                                <th>Their Pre-Owned Items</th>
+                                <th>Sell</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>
+                                    <div class="media">
+                                        <a href="#" class="pull-left">
+                                            <%= image_tag('books.jpg', class: "media-object") %>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a href="">Item Name</a><small><i> starts selling on January 10, 2014</i></small></h5>
+                                                <p>Excellent feature!</p>
+                                            </div>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td>
+                                </td>
+                                <td><p><button class="btn btn-primary btn-xs" data-title="Sell" data-target="#sell" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-share"></span></button></p></td>
+                                <td><p><button class="btn btn-success btn-xs" data-title="Edit" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                                <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                                </tr>
+                                <tr>
+                                <td>
+                                    <div class="media">
+                                        <a href="#" class="pull-left">
+                                            <%= image_tag('books.jpg', class: "media-object") %>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a href="">Item Name</a><small><i> starts selling on January 10, 2014</i></small></h5>
+                                                <p>Excellent feature!</p>
+                                            </div>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td>
+                                </td>
+                                <td><p><button class="btn btn-primary btn-xs" data-title="Sell" data-target="#sell" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-share"></span></button></p></td>
+                                <td><p><button class="btn btn-success btn-xs" data-title="Edit" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                                <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                                </tr>
+                                <tr>
+                                <td>
+                                    <div class="media">
+                                        <a href="#" class="pull-left">
+                                            <%= image_tag('books.jpg', class: "media-object") %>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a href="">Item Name</a><small><i> starts selling on January 10, 2014</i></small></h5>
+                                                <p>Excellent feature!</p>
+                                            </div>
+                                    </div>
+                                </td>
+                                <td>Irshad</td>
+                                <td>
+                                    <div class="media">
+                                        <a href="#" class="pull-left">
+                                            <%= image_tag('Minecraft.png', class: "media-object") %>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a href="">Item Name</a><small><i> bidded on January 10, 2014</i></small></h5>
+                                                <p>Excellent feature!</p>
+                                            </div>
+                                    </div>
+                                </td>
+                                <td><p><button class="btn btn-primary btn-xs" data-title="Sell" data-target="#sell" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-share"></span></button></p></td>
+                                <td><p><button class="btn btn-success btn-xs" data-title="Edit" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                                <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                                </tr>
+                                <tr>
+                                <td>
+                                    <div class="media">
+                                        <a href="#" class="pull-left">
+                                            <%= image_tag('books.jpg', class: "media-object") %>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a href="">Item Name</a><small><i> starts selling on January 10, 2014</i></small></h5>
+                                                <p>Excellent feature!</p>
+                                            </div>
+                                    </div>
+                                </td>
+                                <td>Irshad</td>
+                                <td>
+                                    <div class="media">
+                                        <a href="#" class="pull-left">
+                                            <%= image_tag('Minecraft.png', class: "media-object") %>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a href="">Item Name</a><small><i> bidded on January 10, 2014</i></small></h5>
+                                                <p>Excellent feature!</p>
+                                            </div>
+                                    </div>
+                                </td>
+                                <td><p><button class="btn btn-primary btn-xs" data-title="Sell" data-target="#sell" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-share"></span></button></p></td>
+                                <td><p><button class="btn btn-success btn-xs" data-title="Edit" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                                <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                                </tr>
+                                <tr>
+                                <td>
+                                    <div class="media">
+                                        <a href="#" class="pull-left">
+                                            <%= image_tag('books.jpg', class: "media-object") %>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a href="">Item Name</a><small><i> starts selling on January 10, 2014</i></small></h5>
+                                                <p>Excellent feature!</p>
+                                            </div>
+                                    </div>
+                                </td>
+                                <td>Irshad</td>
+                                <td>
+                                    <div class="media">
+                                        <a href="#" class="pull-left">
+                                            <%= image_tag('Minecraft.png', class: "media-object") %>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a href="">Item Name</a><small><i> bidded on January 10, 2014</i></small></h5>
+                                                <p>Excellent feature!</p>
+                                            </div>
+                                    </div>
+                                </td>
+                                <td><p><button class="btn btn-primary btn-xs" data-title="Sell" data-target="#sell" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-share"></span></button></p></td>
+                                <td><p><button class="btn btn-success btn-xs" data-title="Edit" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                                <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                                </tr>
+                                <tr>
+                                <td>
+                                    <div class="media">
+                                        <a href="#" class="pull-left">
+                                            <%= image_tag('books.jpg', class: "media-object") %>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a href="">Item Name</a><small><i> starts selling on January 10, 2014</i></small></h5>
+                                                <p>Excellent feature!</p>
+                                            </div>
+                                    </div>
+                                </td>
+                                <td>Irshad</td>
+                                <td>
+                                    <div class="media">
+                                        <a href="#" class="pull-left">
+                                            <%= image_tag('Minecraft.png', class: "media-object") %>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a href="">Item Name</a><small><i> bidded on January 10, 2014</i></small></h5>
+                                                <p>Excellent feature!</p>
+                                            </div>
+                                    </div>
+                                </td>
+                                <td><p><button class="btn btn-primary btn-xs" data-title="Sell" data-target="#sell" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-share"></span></button></p></td>
+                                <td><p><button class="btn btn-success btn-xs" data-title="Edit" data-target="#edit" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                                <td><p><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="panel-footer">
+                            <div class="row">
+                                <div class="col-md-offset-5 col-md-3">
+                                    <h4>Total Count <span class="label label-info">25</span></h4>
+                                </div>
+                                <div class="col-md-4">
+                                    <ul class="pagination pull-right">
+                                        <li class="disabled"><a href="#">&laquo;</a></li>
+                                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">&raquo;</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!--panel contents end-->
+                </div>
+            </div><!-- content ends -->
+            <!-- modal detele starts -->
+            <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title custom_align" id="Heading">Delete this entry</h4>
+                        </div>
+                    <div class="modal-body">
+                        <div class="alert alert-warning"><span class="glyphicon glyphicon-warning-sign"></span> Are you sure you want to delete this Record?
+                        </div>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-danger" ><span class="glyphicon glyphicon-ok-sign"></span> Yes</button>
+                        <button type="button" class="btn btn-warning" ><span class="glyphicon glyphicon-remove"></span> No</button>
+                    </div>
+                    </div>
+                </div>
+            </div><!-- modal detele ends -->
+        </div>
+</div>

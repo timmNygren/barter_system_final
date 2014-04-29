@@ -1,0 +1,179 @@
+<div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar begins -->
+            <div class="col-sm-3 col-md-2 sidebar">
+                <div id="sidebar-nav">
+                    <div id="accounts-menu" class="list-group">
+                        <a href="#" class="list-group-item active">
+                            <span class="glyphicon glyphicon-user"></span> UserName
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-envelope"></span> Edit Profile
+                        </a>
+                        <div class = "dropdown">
+                             <a href="#" class="list-group-item" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-exclamation-sign"></span>
+                            Notifications <span class = "badge"> 10 </span>
+                                 <!--div id ="notice">
+                                 <span class = "badge"> 10 </span>
+                                 <!--span class="caret"></span-->
+                            </a>                            
+                        </div>                  
+                    </div>
+                    <br>
+                    <div id="barter-menu">
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-search"></span> Search
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-home"></span> Barter System
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-check"></span> Bidding Items
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-share"></span> Selling Items
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-bullhorn"></span> Swaping Rules
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-tower"></span> Community
+                        </a>
+                    </div>
+                </div>
+            </div><!-- Sidebar ends -->
+            <!-- content begins -->
+            <div class="col-sm-10">
+                <div id="mySystem">
+                    <div class="panel panel-primary">
+                    <!-- Default panel contents -->
+                        <div class="panel-heading">
+                            <span class="glyphicon glyphicon-list"></span> Selling Items
+                        </div>
+                        <div class="panel-body">
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="test" placeholder="Search">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- Table -->
+                        <table class="table table-hover" id="bidding-table">
+                            <thead>
+                                <th>Selling Items</th>
+                                <th>Seller</th>
+                                <th>Bid</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>
+                                    <div class="media">
+                                        <a href="#" class="pull-left">
+                                            <%= image_tag('books.jpg', class: "media-object") %>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a href="">Item Name</a><small><i> starts selling on January 10, 2014</i></small></h5>
+                                                <p>Excellent feature!</p>
+                                            </div>
+                                    </div>
+                                </td>
+                                <td>Seller</td>
+                                <td><p><button class="btn btn-warning btn-xs" data-title="Bid" data-target="#bid" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-check"></span></button></p></td>
+                                </tr>
+                                <tr>
+                                <td>
+                                    <div class="media">
+                                        <a href="#" class="pull-left">
+                                            <%= image_tag('books.jpg', class: "media-object") %>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a href="">Item Name</a><small><i> starts selling on January 10, 2014</i></small></h5>
+                                                <p>Excellent feature!</p>
+                                            </div>
+                                    </div>
+                                </td>
+                                <td>Seller</td>
+                                <td>Sold Out</td>
+                                </tr>
+                                <tr>
+                                <td>
+                                    <div class="media">
+                                        <a href="#" class="pull-left">
+                                            <%= image_tag('books.jpg', class: "media-object") %>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a href="">Item Name</a><small><i> starts selling on January 10, 2014</i></small></h5>
+                                                <p>Excellent feature!</p>
+                                            </div>
+                                    </div>
+                                </td>
+                                <td>Seller</td>
+                                <td><p><button class="btn btn-warning btn-xs" data-title="Bid" data-target="#bid" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-check"></span></button></p></td>
+                                </tr>
+                                <tr>
+                                <td>
+                                    <div class="media">
+                                        <a href="#" class="pull-left">
+                                            <%= image_tag('books.jpg', class: "media-object") %>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a href="">Item Name</a><small><i> starts selling on January 10, 2014</i></small></h5>
+                                                <p>Excellent feature!</p>
+                                            </div>
+                                    </div>
+                                </td>
+                                <td>Seller</td>
+                                <td><p><button class="btn btn-warning btn-xs" data-title="Bid" data-target="#bid" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-check"></span></button></p></td>
+                                </tr>
+                                <tr>
+                                <td>
+                                    <div class="media">
+                                        <a href="#" class="pull-left">
+                                            <%= image_tag('books.jpg', class: "media-object") %>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a href="">Item Name</a><small><i> starts selling on January 10, 2014</i></small></h5>
+                                                <p>Excellent feature!</p>
+                                            </div>
+                                    </div>
+                                </td>
+                                <td>Seller</td>
+                                <td><p><button class="btn btn-warning btn-xs" data-title="Bid" data-target="#bid" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-check"></span></button></p></td>
+                                </tr>
+                                <tr>
+                                <td>
+                                    <div class="media">
+                                        <a href="#" class="pull-left">
+                                            <%= image_tag('books.jpg', class: "media-object") %>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a href="">Item Name</a><small><i> starts selling on January 10, 2014</i></small></h5>
+                                                <p>Excellent feature!</p>
+                                            </div>
+                                    </div>
+                                </td>
+                                <td>Seller</td>
+                                <td>Sold Out</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="panel-footer">
+                            <div class="row">
+                                <div class="col-md-offset-5 col-md-3">
+                                    <h4>Total Count <span class="label label-info">25</span></h4>
+                                </div>
+                                <div class="col-md-4">
+                                    <ul class="pagination pull-right">
+                                        <li class="disabled"><a href="#">&laquo;</a></li>
+                                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">&raquo;</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- content ends -->
+        </div>
+</div>
