@@ -2,15 +2,14 @@ BarterSystem::Application.routes.draw do
 
   devise_for :users
   resources :barters
-  
-  get "welcome/index"
-  get "welcome/about"
-  get "welcome/contact"
+
+  get 'root/welcome', as: 'welcome'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index', as: 'index'
+  root 'root#index', as: 'index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
