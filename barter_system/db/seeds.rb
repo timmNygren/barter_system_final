@@ -8,11 +8,20 @@
 User.delete_all
 Barter.delete_all
 joe = User.create!(email: 'joe@gmail.com',
-		     		password: 'secret1234',)
+		     		password: 'secret1234',
+		     		first_name: 'Joe',
+		     		last_name: 'Schmoe',
+		     		display_name: 'Schmoej')
 bob = User.create!(email: 'bob@yahoo.com',
-					password: '12345678',)
+					password: '12345678',
+					first_name: 'Bobby',
+					last_name: 'Bouche',
+					display_name: 'William')
 susan = User.create!(email: 'susan@aol.com',
-					password: 'susanrox',)
+					password: 'susanrox',
+					first_name: 'Susan',
+					last_name: 'Strong',
+					display_name: 'Raggle')
 
 Barter.create!(seller: joe.id, selling: "calculus textbook", buyer: susan.id, offer: "diff eq textbook")
 Barter.create!(seller: joe.id, selling: "calculus textbook", buyer: susan.id, offer: "iclicker")
