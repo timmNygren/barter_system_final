@@ -5,6 +5,18 @@ $thumbnail-caption-color: #2cb9ed;
 
 @import "bootstrap";
 
+.alert {
+  margin: 0 auto;
+  text-align: center;
+  color: red;
+}
+
+.notice {
+   margin: 0 auto;
+   text-align: center;
+   color: #2cb9ed;
+}
+
 /*body {
     padding-top: 70px;
     padding-bottom: 30px;
