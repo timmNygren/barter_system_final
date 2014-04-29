@@ -5,13 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
+User.delete_all
+Barter.delete_all
 joe = User.create!(email: 'joe@gmail.com',
-		     		password: 'secret1234')
+		     		password: 'secret1234',)
 bob = User.create!(email: 'bob@yahoo.com',
-					password: '12345678')
+					password: '12345678',)
 susan = User.create!(email: 'susan@aol.com',
-					password: 'susanrox')
+					password: 'susanrox',)
 
 Barter.create!(seller: joe.id, selling: "calculus textbook", buyer: susan.id, offer: "diff eq textbook")
 Barter.create!(seller: joe.id, selling: "calculus textbook", buyer: susan.id, offer: "iclicker")
