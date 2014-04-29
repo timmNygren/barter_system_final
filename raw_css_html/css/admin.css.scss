@@ -180,10 +180,16 @@
 #myTab.nav.nav-tabs {
     li {
         a {
-            color: $gray;
+            color: $gray-lighter;
             &:hover {
                 color: $gray-darker;
             }
+        }
+    }
+    li.active {
+        a {
+            color: $gray-darker;
+        
         }
     }
 }
