@@ -20,8 +20,7 @@ $thumbnail-caption-color: #2cb9ed;
 }
 
 .form-signin {
-  max-width: 430px;
-  padding: 15px;
+  max-width: 500px;
   margin: 0 auto;
 }
 .form-signin .form-signin-heading,
@@ -30,6 +29,7 @@ $thumbnail-caption-color: #2cb9ed;
 }
 .form-signin .checkbox {
   font-weight: normal;
+    margin-left: 20px;
 }
 .form-signin .form-control {
   position: relative;
