@@ -21,27 +21,74 @@
             <div class="masthead">
                 <h3 class="text-muted">MINES Barter System</h3>
                 <ul class="nav nav-justified">
-                <li><%= link_to "Home", index_path %></li>
-                <% if user_signed_in? %>
-                <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-                <% else %>
-                <li><%= link_to "Sign In", new_user_session_path %></li>
-                <% end %>
+                    <li><%= link_to "Home", index_path %></li>
+                    <% if user_signed_in? %>
+                    <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+                    <% else %>
+                    <li><%= link_to "Sign In", new_user_session_path %></li>
+                    <% end %>
                 <!-- <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li> -->
-                </ul>
-            </div>
+            </ul>
         </div>
-        <!-- Page Content -->
-        <div class="container">
+    <!-- </div> -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar begins -->
+            <div class="col-sm-3 col-md-2 sidebar">
+                <div id="sidebar-nav">
+                    <div id="accounts-menu" class="list-group">
+                        <a href="#" class="list-group-item active">
+                            <span class="glyphicon glyphicon-user"></span> UserName
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-envelope"></span> Edit Profile
+                        </a>
+                        <div class = "dropdown">
+                           <a href="#" class="list-group-item" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-exclamation-sign"></span>
+                            Notifications <span class = "badge"> 10 </span>
+                                 <!--div id ="notice">
+                                 <span class = "badge"> 10 </span>
+                                 <!--span class="caret"></span-->
+                             </a>                            
+                         </div>                  
+                     </div>
+                     <br>
+                     <div id="barter-menu">
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-search"></span> Search
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-home"></span> Barter System
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-check"></span> Bidding Items
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-share"></span> Selling Items
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-bullhorn"></span> Swaping Rules
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-tower"></span> Community
+                        </a>
+                    </div>
+                </div>
+            </div><!-- Sidebar ends -->
+            <!-- Page Content -->
+
             <%= yield %>
-        </div>        
-    </div>
-    <div id="footer">
-        <div class="container">
-        <p class="text-muted credit"><a href="http://eecs.mines.edu/Courses/csci446/">Final Project of CSCI446 Web Application</a> by Hunter Lang, Timothy Nygren and Wenjun Ji</p>
         </div>
+        </div>
+    </div>        
+</div>
+<div id="footer">
+    <div class="container">
+        <p class="text-muted credit"><a href="http://eecs.mines.edu/Courses/csci446/">Final Project of CSCI446 Web Application</a> by Hunter Lang, Timothy Nygren and Wenjun Ji</p>
     </div>
+</div>
 </body>
 </html>
 
