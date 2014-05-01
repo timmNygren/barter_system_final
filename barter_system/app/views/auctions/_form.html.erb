@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :auction_description %><br>
-    <%= f.text_field :auction_description %>
+    <%= f.text_area :auction_description %>
   </div>
   <div class="field">
     <%= f.label :user_id %><br>
@@ -26,6 +26,12 @@
   <div class="field">
     <%= f.label :available %><br>
     <%= f.check_box :available %>
+  </div>
+  <div class="field">
+    <%= f.label :auctionPicture %><br>
+    <%= image_tag(@auction.auctionPicture_url) if @auction.auctionPicture? %>
+    <%= f.file_field :auctionPicture %>
+    <%= f.hidden_field :auctionPicture_cache %>
   </div>
   <div class="actions">
     <%= f.submit %>

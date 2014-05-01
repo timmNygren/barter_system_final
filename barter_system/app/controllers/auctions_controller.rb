@@ -25,7 +25,6 @@ class AuctionsController < ApplicationController
   # POST /auctions.json
   def create
     @auction = Auction.new(auction_params)
-
     respond_to do |format|
       if @auction.save
         format.html { redirect_to @auction, notice: 'Auction was successfully created.' }
