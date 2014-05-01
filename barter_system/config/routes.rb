@@ -1,10 +1,10 @@
 BarterSystem::Application.routes.draw do
 
+  resources :swaps
+
   resources :auctions
 
   devise_for :users
-  resources :barters
-
   get 'root/welcome', as: 'welcome'
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  aution_id: 1
+  offer_id: 1
+  state: MyString
+
+two:
+  aution_id: 1
+  offer_id: 1
+  state: MyString
