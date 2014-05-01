@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20140501213802) do
   end
 
   create_table "swaps", force: true do |t|
-    t.integer  "aution_id"
+    t.integer  "auction_id"
     t.integer  "offer_id"
     t.string   "state"
     t.datetime "created_at"
