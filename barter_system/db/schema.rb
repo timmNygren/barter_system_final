@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20140501213802) do
     t.boolean  "available"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "auction_Picture"
+    t.string   "image"
   end
 
   create_table "swaps", force: true do |t|
