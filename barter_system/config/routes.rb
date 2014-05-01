@@ -5,7 +5,8 @@ BarterSystem::Application.routes.draw do
   resources :auctions
 
   devise_for :users
-  get 'root/welcome', as: 'welcome'
+  
+  get 'welcome', as: 'welcome', controller: 'root', action: 'welcome'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
