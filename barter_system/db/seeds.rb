@@ -6,7 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 User.delete_all
-Barter.delete_all
+Auction.delete_all
+Swap.delete_all
+
 joe = User.create!(email: 'joe@gmail.com',
 		     		password: 'secret1234',
 		     		first_name: 'Joe',
@@ -23,14 +25,32 @@ susan = User.create!(email: 'susan@aol.com',
 					last_name: 'Strong',
 					display_name: 'Raggle')
 
-Barter.create!(seller: joe.id, selling: "calculus textbook", buyer: susan.id, offer: "diff eq textbook")
-Barter.create!(seller: joe.id, selling: "calculus textbook", buyer: susan.id, offer: "iclicker")
-Barter.create!(seller: joe.id, selling: "calculus textbook", buyer: bob.id, offer: "ti-89")
-Barter.create!(seller: joe.id, selling: "calculus textbook", buyer: bob.id, offer: "really expensive graph paper")
-Barter.create!(seller: bob.id, selling: "calculus textbook", buyer: joe.id, offer: "calculus textbook") # troll bid
-Barter.create!(seller: bob.id, selling: "physics tutoring", buyer: susan.id, offer: "solidworks tutoring")
-Barter.create!(seller: bob.id, selling: "statics tutoring", buyer: susan.id, offer: "solidworks tutoring")
-Barter.create!(seller: susan.id, selling: "ti-89 titanium", buyer: joe.id, offer: "calculus textbook")
-Barter.create!(seller: susan.id, selling: "iclicker", buyer: bob.id, offer: "drafting utensils")
-Barter.create!(seller: susan.id, selling: "slide rule", buyer: joe.id, offer: "a real ruler") # a bad trade
-Barter.create!(seller: susan.id, selling: "calipers", buyer: bob.id, offer: "electronic calipers")
+calc_textbook = Auction.create(auction_name: "Calc Textbook",
+                               auction_description: "That one textbook, you know the one",
+                               user_id: joe.id,
+                               available: true,
+                               auction_Picture: File.join(Rails.root, "app/assets/images/book.jpg"))
+
+ti89 = Auction.create(auction_name: "TI-89 Calculator",
+                      auction_description: "The best one there is",
+                      user_id: bob.id,
+                      available: true,
+                      auction_Picture: File.join(Rails.root, "app/assets/images/calc.jpg"))
+
+clicker = Auction.create(auction_name: "iClicker",
+                         auction_description: "Slightly used iClicker",
+                         user_id: susan.id,
+                         available: false,
+                         auction_Picture: File.join(Rails.root, "app/assets/images/clicker.jpg"))
+
+Swap.create(auction_id: calc_textbook.id,
+            offer_id: ti89.id,
+            state: "Open")
+
+Swap.create(auction_id: clicker.id,
+            offer_id: calc_textbook.id,
+            state: "Accepted")
+
+Swap.create(auction_id: calc_textbook.id,
+            offer_id: clicker.id,
+            state: "Denied")

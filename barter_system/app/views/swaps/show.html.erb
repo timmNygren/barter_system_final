@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>auction:</strong>
+  <%= @swap.auction_id %>
+</p>
+
+<p>
+  <strong>Offer:</strong>
+  <%= @swap.offer_id %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @swap.state %>
+</p>
+
+<%= link_to 'Edit', edit_swap_path(@swap) %> |
+<%= link_to 'Back', swaps_path %>
