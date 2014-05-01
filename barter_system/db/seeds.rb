@@ -25,23 +25,23 @@ susan = User.create!(email: 'susan@aol.com',
 					last_name: 'Strong',
 					display_name: 'Raggle')
 
-calc_textbook = Auction.create(auction_name: "Calc Textbook",
+calc_textbook = Auction.create!(auction_name: "Calc Textbook",
                                auction_description: "That one textbook, you know the one",
                                user_id: joe.id,
                                available: true,
-                               image: File.join(Rails.root, "app/assets/images/book.jpg"))
+                               image: File.open(File.join(Rails.root, "app/assets/images/books.jpg")))
 
-ti89 = Auction.create(auction_name: "TI-89 Calculator",
+ti89 = Auction.create!(auction_name: "TI-89 Calculator",
                       auction_description: "The best one there is",
                       user_id: bob.id,
                       available: true,
-                      image: File.join(Rails.root, "app/assets/images/calc.jpg"))
+                      image: File.open(File.join(Rails.root, "app/assets/images/books.jpg")))
 
-clicker = Auction.create(auction_name: "iClicker",
+clicker = Auction.create!(auction_name: "iClicker",
                          auction_description: "Slightly used iClicker",
                          user_id: susan.id,
                          available: false,
-                         image: File.join(Rails.root, "app/assets/images/clicker.jpg"))
+                         image: File.open(File.join(Rails.root, "app/assets/images/books.jpg")))
 
 Swap.create(auction_id: calc_textbook.id,
             offer_id: ti89.id,
