@@ -28,10 +28,10 @@
     <%= f.check_box :available %>
   </div>
   <div class="field">
-    <%= f.label :auctionPicture %><br>
-    <%= image_tag(@auction.auctionPicture_url) if @auction.auctionPicture? %>
-    <%= f.file_field :auctionPicture %>
-    <%= f.hidden_field :auctionPicture_cache %>
+    <%= f.label :image %><br>
+    <%= image_tag(@auction.image_url) if @auction.image? %>
+    <%= f.file_field :image %>
+    <%= f.hidden_field :image_cache %>
   </div>
   <div class="actions">
     <%= f.submit %>
