@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140429030750) do
+ActiveRecord::Schema.define(version: 20140501211312) do
+
+  create_table "auctions", force: true do |t|
+    t.string   "auction_name"
+    t.string   "auction_description"
+    t.integer  "user_id"
+    t.boolean  "available"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "auction_Picture"
+  end
 
   create_table "barters", force: true do |t|
     t.integer  "seller"

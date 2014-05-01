@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  auction_name: MyString
+  auction_description: MyString
+  user_id: 1
+  available: false
+
+two:
+  auction_name: MyString
+  auction_description: MyString
+  user_id: 1
+  available: false

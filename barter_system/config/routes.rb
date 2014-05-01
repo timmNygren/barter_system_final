@@ -1,5 +1,7 @@
 BarterSystem::Application.routes.draw do
 
+  resources :auctions
+
   devise_for :users
   resources :barters
 
