@@ -18,7 +18,7 @@ class SwapsControllerTest < ActionController::TestCase
 
   test "should create swap" do
     assert_difference('Swap.count') do
-      post :create, swap: { aution_id: @swap.aution_id, offer_id: @swap.offer_id, state: @swap.state }
+      post :create, swap: { auction_id: @swap.auction_id, offer_id: @swap.offer_id, state: @swap.state }
     end
 
     assert_redirected_to swap_path(assigns(:swap))
@@ -35,7 +35,7 @@ class SwapsControllerTest < ActionController::TestCase
   end
 
   test "should update swap" do
-    patch :update, id: @swap, swap: { aution_id: @swap.aution_id, offer_id: @swap.offer_id, state: @swap.state }
+    patch :update, id: @swap, swap: { auction_id: @swap.auction_id, offer_id: @swap.offer_id, state: @swap.state }
     assert_redirected_to swap_path(assigns(:swap))
   end
 
