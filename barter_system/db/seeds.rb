@@ -29,19 +29,19 @@ calc_textbook = Auction.create(auction_name: "Calc Textbook",
                                auction_description: "That one textbook, you know the one",
                                user_id: joe.id,
                                available: true,
-                               auction_Picture: File.join(Rails.root, "app/assets/images/book.jpg"))
+                               image: File.join(Rails.root, "app/assets/images/book.jpg"))
 
 ti89 = Auction.create(auction_name: "TI-89 Calculator",
                       auction_description: "The best one there is",
                       user_id: bob.id,
                       available: true,
-                      auction_Picture: File.join(Rails.root, "app/assets/images/calc.jpg"))
+                      image: File.join(Rails.root, "app/assets/images/calc.jpg"))
 
 clicker = Auction.create(auction_name: "iClicker",
                          auction_description: "Slightly used iClicker",
                          user_id: susan.id,
                          available: false,
-                         auction_Picture: File.join(Rails.root, "app/assets/images/clicker.jpg"))
+                         image: File.join(Rails.root, "app/assets/images/clicker.jpg"))
 
 Swap.create(auction_id: calc_textbook.id,
             offer_id: ti89.id,
