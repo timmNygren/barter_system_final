@@ -7,6 +7,7 @@
       <th>Auction description</th>
       <th>User</th>
       <th>Available</th>
+      <th>Picture<th>
       <th></th>
       <th></th>
       <th></th>
@@ -20,6 +21,7 @@
         <td><%= auction.auction_description %></td>
         <td><%= auction.user_id %></td>
         <td><%= auction.available %></td>
+        <td><%= image_tag(auction.image_url) %></td>
         <td><%= link_to 'Show', auction %></td>
         <td><%= link_to 'Edit', edit_auction_path(auction) %></td>
         <td><%= link_to 'Destroy', auction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
