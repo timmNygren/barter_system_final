@@ -7,6 +7,11 @@ class SwapsController < ApplicationController
     @swaps = Swap.all
   end
 
+  # GET /open_user_swaps
+  def open_for_user
+    @swaps = Swap.where(owner_id: current_user.id, state: "Open")
+  end
+
   # GET /swaps/1
   # GET /swaps/1.json
   def show

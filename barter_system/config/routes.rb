@@ -8,6 +8,8 @@ BarterSystem::Application.routes.draw do
   
   get 'welcome', as: 'welcome', controller: 'root', action: 'welcome'
 
+  get 'user_swaps', as: 'open_user_swaps', controller: 'swaps', action: 'open_for_user'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
