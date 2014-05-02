@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+  <%= f.hidden_field :bidder_id, value: current_user.id %>
+  <%= f.hidden_field :state, value: "Open" %>
   <div class="field">
     <%= f.label :auction_id %><br>
     <%= f.number_field :auction_id %>
@@ -18,10 +20,6 @@
   <div class="field">
     <%= f.label :offer_id %><br>
     <%= f.number_field :offer_id %>
-  </div>
-  <div class="field">
-    <%= f.label :state %><br>
-    <%= f.text_field :state %>
   </div>
   <div class="actions">
     <%= f.submit %>

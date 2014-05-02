@@ -45,12 +45,18 @@ clicker = Auction.create!(auction_name: "iClicker",
 
 Swap.create(auction_id: calc_textbook.id,
             offer_id: ti89.id,
-            state: "Open")
+            state: "Open",
+            bidder_id: susan.id,
+            owner_id: bob.id)
 
 Swap.create(auction_id: clicker.id,
             offer_id: calc_textbook.id,
-            state: "Accepted")
+            state: "Accepted",
+            bidder_id: joe.id,
+            owner_id: susan.id)
 
 Swap.create(auction_id: calc_textbook.id,
             offer_id: clicker.id,
-            state: "Denied")
+            state: "Denied",
+            bidder_id: bob.id,
+            owner_id: joe.id)

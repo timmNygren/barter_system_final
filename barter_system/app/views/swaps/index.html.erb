@@ -1,32 +1,48 @@
+
 <%= render partial: 'shared/sidebar' %>
-<h1>Listing swaps</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>auction</th>
-      <th>Offer</th>
-      <th>State</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @swaps.each do |swap| %>
-      <tr>
-        <td><%= swap.auction_id %></td>
-        <td><%= swap.offer_id %></td>
-        <td><%= swap.state %></td>
-        <td><%= link_to 'Show', swap %></td>
-        <td><%= link_to 'Edit', edit_swap_path(swap) %></td>
-        <td><%= link_to 'Destroy', swap, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Swap', new_swap_path %>
+<div class="col-sm-10">
+  <div id="mySystem">
+    <div class="panel panel-primary">
+      <!-- Default panel contents -->
+      <div class="panel-heading">
+          <span class="glyphicon glyphicon-list"></span> All Swaps
+      </div>
+      <table class="table table-hover" id="bidding-table">
+        <thead>
+          <tr>
+            <th>Auctioned Item</th>
+            <th>Owner</th>
+            <th>Bidding Item</th>
+            <th>Bidder</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @swaps.each do |swap| %>
+          <tr>
+            <td>
+              <div class="media">
+                <%= image_tag(Auction.find_by(id: swap.auction_id).image_url(:thumb) , class: "media-object") %>
+              </div>
+            </td>
+            <td>
+              <div class="media-body">
+                <h5 class="media-heading"><%= User.find_by(id: swap.owner_id).display_name %></h5>
+              </div>
+            </td>
+            <td>
+              <div class="media">
+                <%= image_tag(Auction.find_by(id: swap.offer_id).image_url(:thumb) , class: "media-object") %>
+              </div>
+            </td>
+            <td>
+              <div class="media-body">
+                <h5 class="media-heading"><%= User.find_by(id: swap.bidder_id).display_name %></h5>
+              </div>              
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
