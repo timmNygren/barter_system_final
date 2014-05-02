@@ -1,24 +1,40 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Auction name:</strong>
-  <%= @auction.auction_name %>
-</p>
+<%= render partial: 'shared/sidebar' %>
 
-<p>
-  <strong>Auction description:</strong>
-  <%= @auction.auction_description %>
-</p>
 
-<p>
-  <strong>User:</strong>
-  <%= @auction.user_id %>
-</p>
-
-<p>
-  <strong>Available:</strong>
-  <%= @auction.available %>
-</p>
-
-<%= link_to 'Edit', edit_auction_path(@auction) %> |
-<%= link_to 'Back', auctions_path %>
+<div class="col-sm-10">
+  <div id="mySystem">
+    <div class="panel panel-primary">
+      <!-- Default panel contents -->
+      <div class="panel-heading">
+          <span class="glyphicon glyphicon-list"></span> <%= @auction.auction_name %>
+      </div>
+      <table class="table table-hover" id="bidding-table">
+        <thead>
+          <tr>
+            <th>Picture</th>
+            <th>Item description</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="media">
+                <%= image_tag(@auction.image_url, :class => "media-object") %>
+              </div>
+            </td>
+            <td>
+              <p><%= @auction.auction_description %></p>
+            </td>
+            <td>
+              <%= link_to 'Edit', edit_auction_path(@auction) %> |
+			  <%= link_to 'Back', auctions_path %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -20,7 +20,7 @@
                         <td>
                             <div class="media">
                                 <a href="#" class="pull-left">
-                                    <%= image_tag(auction.image_url , class: "media-object") %>
+                                    <%= image_tag(auction.image_url(:thumb) , class: "media-object") %>
                                 </a>
                                 <div class="media-body">
                                     <h5 class="media-heading"><a href=""><%= auction.auction_name %></a></h5>

@@ -17,8 +17,8 @@
         <thead>
           <tr>
             <th>Picture</th>
-            <th>Auction name</th>
-            <th>Auction description</th>
+            <th>Item name</th>
+            <th>Item description</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -27,7 +27,7 @@
           <tr>
             <td>
               <div class="media">
-                <%= image_tag(auction.image_url , class: "media-object") %>
+                <%= image_tag(auction.image_url(:thumb) , class: "media-object") %>
               </div>
             </td>
             <td>
