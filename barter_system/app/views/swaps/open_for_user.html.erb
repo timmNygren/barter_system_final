@@ -1,1 +1,32 @@
 <%= render partial: 'shared/sidebar' %>
+<h1>Listing OPEN swaps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>auction</th>
+      <th>Offer</th>
+      <th>State</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @swaps.each do |swap| %>
+      <tr>
+        <td><%= swap.auction_id %></td>
+        <td><%= swap.offer_id %></td>
+        <td><%= swap.state %></td>
+        <td><%= link_to 'Show', swap %></td>
+        <td><%= link_to 'Edit', edit_swap_path(swap) %></td>
+        <td><%= link_to 'Destroy', swap, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Swap', new_swap_path %>
