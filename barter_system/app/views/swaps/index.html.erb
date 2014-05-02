@@ -14,6 +14,7 @@
             <th>Owner</th>
             <th>Bidding Item</th>
             <th>Bidder</th>
+            <th>State of Transaction</th>
           </tr>
         </thead>
         <tbody>
@@ -38,6 +39,11 @@
               <div class="media-body">
                 <h5 class="media-heading"><%= User.find_by(id: swap.bidder_id).display_name %></h5>
               </div>              
+            </td>
+            <td>
+              <div class="media-body">
+                <h5 class="media-heading" align="center"><%= swap.state %></h5>
+              </div>   
             </td>
           </tr>
           <% end %>
