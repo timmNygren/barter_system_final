@@ -37,7 +37,7 @@ class SwapsController < ApplicationController
 
     respond_to do |format|
       if @swap.save
-        format.html { redirect_to @swap, notice: 'Swap was successfully created.' }
+        format.html { redirect_to index_path, notice: 'Swap was successfully created.' }
         format.json { render :show, status: :created, location: @swap }
       else
         format.html { render :new }
