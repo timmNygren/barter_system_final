@@ -12,6 +12,10 @@ class SwapsController < ApplicationController
     @swaps = Swap.where(owner_id: current_user.id, state: "Open")
   end
 
+  def create_new
+    @auction_id = params[:id];
+  end
+
   # GET /swaps/1
   # GET /swaps/1.json
   def show

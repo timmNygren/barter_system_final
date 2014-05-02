@@ -12,7 +12,7 @@
                 <thead>
                     <th>Auctioning Items</th>
                     <th>Seller</th>
-                    <th>Bid</th>
+                    <th></th>
                 </thead>
                 <tbody>
                     <% @auctions.each do |auction| %>
@@ -28,8 +28,12 @@
                                 </div>
                             </div>
                         </td>
-                        <td><%= auction.user.display_name %></td>
-                        <td><p><button class="btn btn-warning btn-xs" data-title="Bid" data-target="#bid" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-check"></span></button></p></td>
+                        <td>
+                            <%= auction.user.display_name %>
+                        </td>
+                        <td>
+                            <%= link_to 'Bid', create_swap_path(auction.id), {:class => "btn btn-warning btn-xs"} %>
+                        </td>
                     </tr>
                     <% end %>
                 </tbody>
