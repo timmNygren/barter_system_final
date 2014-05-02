@@ -20,6 +20,8 @@ class SwapsController < ApplicationController
     bid = Auction.find_by(id: @swap.offer_id)
     auctioneer = User.find_by(id: @swap.owner_id)
     bidder = User.find_by(id: @swap.bidder_id)
+    auction.available = false
+    bid.available = false
     auction.user = bidder
     bid.user = auctioneer
     auction.save!

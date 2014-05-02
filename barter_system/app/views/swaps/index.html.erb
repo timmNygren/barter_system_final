@@ -21,8 +21,8 @@
           <% @swaps.each do |swap| %>
           <tr>
             <td>
-              <div class="media">
-                <%= image_tag(Auction.find_by(id: swap.auction_id).image_url(:thumb) , class: "media-object") %>
+              <div class="media-body">
+                <h5 class="media-heading"><%= Auction.find_by(id: swap.auction_id).auction_name %></h5>
               </div>
             </td>
             <td>
@@ -31,8 +31,8 @@
               </div>
             </td>
             <td>
-              <div class="media">
-                <%= image_tag(Auction.find_by(id: swap.offer_id).image_url(:thumb) , class: "media-object") %>
+              <div class="media-body">
+                <h5 class="media-heading"><%= Auction.find_by(id: swap.offer_id).auction_name %></h5>
               </div>
             </td>
             <td>

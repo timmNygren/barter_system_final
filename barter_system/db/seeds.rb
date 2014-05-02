@@ -43,20 +43,14 @@ clicker = Auction.create!(auction_name: "iClicker",
                          available: false,
                          image: File.open(File.join(Rails.root, "app/assets/images/books.jpg")))
 
-Swap.create(auction_id: calc_textbook.id,
-            offer_id: ti89.id,
+Swap.create(auction_id: ti89.id,
+            offer_id: clicker.id,
             state: "Open",
             bidder_id: susan.id,
             owner_id: bob.id)
 
-Swap.create(auction_id: clicker.id,
-            offer_id: calc_textbook.id,
-            state: "Accepted",
-            bidder_id: joe.id,
-            owner_id: susan.id)
-
 Swap.create(auction_id: calc_textbook.id,
-            offer_id: clicker.id,
+            offer_id: ti89.id,
             state: "Denied",
             bidder_id: bob.id,
             owner_id: joe.id)
