@@ -1,40 +1,52 @@
 <%= render partial: 'shared/sidebar' %>
-<h1>Your items</h1>
 
-<%= link_to 'New Auction', new_auction_path %>
 
-<table class="table table-hover" id="bidding-table">
-  <thead>
-    <tr>
-      <th>Picture</th>
-        <th>Auction name</th>
-        <th>Auction description</th>
-        <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @auctions.each do |auction| %>
-    <tr>
-      <td>
-        <div class="media">
-          <%= image_tag(auction.image_url , class: "media-object") %>
-
+<div class="col-sm-10">
+  <div id="mySystem">
+    <div class="panel panel-primary">
+      <!-- Default panel contents -->
+      <div class="panel-heading">
+        <div align="left" style="float:left; margin-top:1.5%;">
+          <span class="glyphicon glyphicon-list"></span> Your Items
         </div>
-      </td>
-      <td>
-        <div class="media-body">
-          <h5 class="media-heading"><%= auction.auction_name %></h5>
-        </div>
-      </td>
-      <td>
-        <p><%= auction.auction_description %></p>
-      </td>
-      <td>
-        <%= link_to 'Show', auction %>
-        <%= link_to 'Edit', edit_auction_path(auction) %>
-        <%= link_to 'Destroy', auction, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+          <div align="right">
+            <%= link_to 'New Auction', new_auction_path, { :class => "btn btn-lg btn-success", :role => "button" } %>
+          </div>
+      </div>
+      <table class="table table-hover" id="bidding-table">
+        <thead>
+          <tr>
+            <th>Picture</th>
+            <th>Auction name</th>
+            <th>Auction description</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @auctions.each do |auction| %>
+          <tr>
+            <td>
+              <div class="media">
+                <%= image_tag(auction.image_url , class: "media-object") %>
+              </div>
+            </td>
+            <td>
+              <div class="media-body">
+                <h5 class="media-heading"><%= auction.auction_name %></h5>
+              </div>
+            </td>
+            <td>
+              <p><%= auction.auction_description %></p>
+            </td>
+            <td>
+              <%= link_to 'Show', auction %>
+              <%= link_to 'Edit', edit_auction_path(auction) %>
+              <%= link_to 'Destroy', auction, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
