@@ -12,6 +12,28 @@ class SwapsController < ApplicationController
     @swaps = Swap.where(owner_id: current_user.id, state: "Open")
   end
 
+  def accept
+    @swap = Swap.find_by(id: params[:id])
+    @swap.state = "Accepted"
+    @swap.save!
+    auction = Auction.find_by(id: @swap.auction_id)
+    bid = Auction.find_by(id: @swap.offer_id)
+    auctioneer = User.find_by(id: @swap.owner_id)
+    bidder = User.find_by(id: @swap.bidder_id)
+    auction.user = bidder
+    bid.user = auctioneer
+    auction.save!
+    bid.save!
+    redirect_to index_path, notice: 'Auction accepted!'
+  end
+
+  def deny
+    @swap = Swap.find_by(id: params[:id])
+    @swap.state = "Denied"
+    @swap.save!
+    redirect_to index_path, notice: 'Auction denied'
+  end
+
   def create_new
     @swap = Swap.new
   end
@@ -37,7 +59,7 @@ class SwapsController < ApplicationController
 
     respond_to do |format|
       if @swap.save
-        format.html { redirect_to @swap, notice: 'Swap was successfully created.' }
+        format.html { redirect_to index_path, notice: 'Swap was successfully created.' }
         format.json { render :show, status: :created, location: @swap }
       else
         format.html { render :new }
