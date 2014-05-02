@@ -36,6 +36,9 @@ class SwapsController < ApplicationController
 
   def create_new
     @swap = Swap.new
+    if current_user.auctions.empty?
+      redirect_to index_path, alert: "You don't have any items to bid!"
+    end
   end
 
   # GET /swaps/1
