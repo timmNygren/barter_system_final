@@ -9,7 +9,8 @@
   <% end %>
 </div>
 <% end %>
-
+<%= f.hidden_field :user_id, value: current_user.id %>
+<%= f.hidden_field :available, value: true %>
 <!-- content begins -->
 <div class="col-sm-10">
   <div id="mySystem">
@@ -28,7 +29,7 @@
     <div class="form-group">
       <label for="itempic" class="col-sm-4">Image of item</label>
       <div class="col-sm-6">
-        <%= image_tag(@auction.image_url) if @auction.image? %>
+        <%= image_tag(@auction.image_url(:thumb)) if @auction.image? %>
         <%= f.file_field :image, id: "picture" %>
       </div>
     </div>
