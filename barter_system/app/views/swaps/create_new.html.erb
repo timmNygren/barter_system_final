@@ -1,0 +1,16 @@
+<%= render partial: 'shared/sidebar' %>
+Creating a new swap for the id: <%= params[:id] %>
+
+<% @item = Auction.find_by(id: params[:id]) %>
+
+You are trading for item <%= @item.auction_name %>
+Select one of your items to trade:
+
+<%= form_for(@swap) do |f| %>
+	<%= collection_radio_buttons(:swap, :offer_id, current_user.auctions, :id, :auction_name) %>
+	<%= f.hidden_field :state, :value => "Open" %>
+	<%= f.hidden_field :bidder_id, :value => current_user.id %>
+	<%= f.hidden_field :auction_id, :value => params[:id] %>
+	<%= f.hidden_field :owner_id, :value => @item.user.id %>
+	<%= f.submit %> 
+<% end %>

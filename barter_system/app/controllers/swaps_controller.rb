@@ -12,6 +12,10 @@ class SwapsController < ApplicationController
     @swaps = Swap.where(owner_id: current_user.id, state: "Open")
   end
 
+  def create_new
+    @swap = Swap.new
+  end
+
   # GET /swaps/1
   # GET /swaps/1.json
   def show
@@ -29,9 +33,7 @@ class SwapsController < ApplicationController
   # POST /swaps
   # POST /swaps.json
   def create
-    @auction = Auction.find_by(id: @swap.auction_id)
-    @owner = User.find_by(id: @auction.user.id)
-    @swap = Swap.new(swap_params, owner_id: @owner.id)
+    @swap = Swap.new(swap_params)
 
     respond_to do |format|
       if @swap.save
@@ -76,6 +78,6 @@ class SwapsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def swap_params
-      params.require(:swap).permit(:auction_id, :offer_id, :state)
+      params.require(:swap).permit(:auction_id, :offer_id, :state, :bidder_id, :owner_id)
     end
 end

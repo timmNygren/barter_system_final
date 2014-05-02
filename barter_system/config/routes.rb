@@ -2,6 +2,8 @@ BarterSystem::Application.routes.draw do
 
   resources :swaps
 
+  get 'create_swap/:id', as: 'create_swap', controller: 'swaps', action: 'create_new'
+
   resources :auctions
 
   devise_for :users
