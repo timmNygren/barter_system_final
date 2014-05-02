@@ -1,4 +1,4 @@
-<%= render partial: 'shared/sidebar' %>
+<!--
 <h1>Listing OPEN swaps</h1>
 
 <table>
@@ -28,5 +28,60 @@
 </table>
 
 <br>
+-->
 
-<%= link_to 'New Swap', new_swap_path %>
+
+<%= render partial: 'shared/sidebar' %>
+
+
+<div class="col-sm-10">
+  <div id="mySystem">
+    <div class="panel panel-primary">
+      <!-- Default panel contents -->
+      <div class="panel-heading">
+          <span class="glyphicon glyphicon-list"></span> Open Swaps
+      </div>
+      <table class="table table-hover" id="bidding-table">
+        <thead>
+          <tr>
+            <th>Auctioned Item</th>
+            <th>Owner</th>
+            <th>Bidding Item</th>
+            <th>Bidder</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @swaps.each do |swap| %>
+          <tr>
+            <td>
+              <div class="media">
+                <%= image_tag(Auction.find_by(id: swap.auction_id).image_url(:thumb) , class: "media-object") %>
+              </div>
+            </td>
+            <td>
+              <div class="media-body">
+                <h5 class="media-heading"><%= User.find_by(id: swap.owner_id).display_name %></h5>
+              </div>
+            </td>
+            <td>
+              <div class="media">
+                <%= image_tag(Auction.find_by(id: swap.offer_id).image_url(:thumb) , class: "media-object") %>
+              </div>
+            </td>
+            <td>
+              <div class="media-body">
+                <h5 class="media-heading"><%= User.find_by(id: swap.bidder_id).display_name %></h5>
+              </div>              
+            </td>
+            <td>
+              <%= link_to 'Accept', index_path %>
+              <%= link_to 'Decline', index_path %>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

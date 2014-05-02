@@ -33,7 +33,9 @@ class SwapsController < ApplicationController
   # POST /swaps
   # POST /swaps.json
   def create
-    @swap = Swap.new(swap_params)
+    @auction = Auction.find_by(id: @swap.auction_id)
+    @owner = User.find_by(id: @auction.user.id)
+    @swap = Swap.new(swap_params, owner_id: @owner.id)
 
     respond_to do |format|
       if @swap.save
