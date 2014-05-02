@@ -9,7 +9,8 @@
 			</div>
 			<div align="center">
 				<%= form_for(@swap) do |f| %>
-				<%= collection_radio_buttons(:swap, :offer_id, current_user.auctions, :id, :auction_name) do |button| %>
+				<% @first_auction = current_user.auctions[0] %>
+				<%= collection_radio_buttons(:swap, :offer_id, current_user.auctions, :id, :auction_name, checked: @first_auction.id) do |button| %>
 				<%= button.label(:"data-value" => button.value) { button.radio_button + button.text } %><br>
 				<% end %>
 				<%= f.hidden_field :state, :value => "Open" %>
