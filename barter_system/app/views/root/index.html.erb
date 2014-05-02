@@ -24,116 +24,25 @@
                     <th>Bid</th>
                 </thead>
                 <tbody>
+                    <% @auctions.each do |auction| %>
                     <tr>
                         <td>
                             <div class="media">
                                 <a href="#" class="pull-left">
-                                    <%= image_tag('books.jpg', class: "media-object") %>
+                                    <%= image_tag(auction.image_url , class: "media-object") %>
                                 </a>
                                 <div class="media-body">
-                                    <h5 class="media-heading"><a href="">Item Name</a><small><i> starts auctioning on January 10, 2014</i></small></h5>
-                                    <p>Excellent feature!</p>
+                                    <h5 class="media-heading"><a href=""><%= auction.auction_name %></a></h5>
+                                    <p><%= auction.auction_description %></p>
                                 </div>
                             </div>
                         </td>
-                        <td>Seller</td>
+                        <td><%= auction.user.display_name %></td>
                         <td><p><button class="btn btn-warning btn-xs" data-title="Bid" data-target="#bid" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-check"></span></button></p></td>
                     </tr>
-                    <tr>
-                        <td>
-                            <div class="media">
-                                <a href="#" class="pull-left">
-                                    <%= image_tag('books.jpg', class: "media-object") %>
-                                </a>
-                                <div class="media-body">
-                                    <h5 class="media-heading"><a href="">Item Name</a><small><i> starts auctioning on January 10, 2014</i></small></h5>
-                                    <p>Excellent feature!</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td>Seller</td>
-                        <td>Sold Out</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="media">
-                                <a href="#" class="pull-left">
-                                    <%= image_tag('books.jpg', class: "media-object") %>
-                                </a>
-                                <div class="media-body">
-                                    <h5 class="media-heading"><a href="">Item Name</a><small><i> starts auctioning on January 10, 2014</i></small></h5>
-                                    <p>Excellent feature!</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td>Seller</td>
-                        <td><p><button class="btn btn-warning btn-xs" data-title="Bid" data-target="#bid" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-check"></span></button></p></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="media">
-                                <a href="#" class="pull-left">
-                                    <%= image_tag('books.jpg', class: "media-object") %>
-                                </a>
-                                <div class="media-body">
-                                    <h5 class="media-heading"><a href="">Item Name</a><small><i> starts auctioning on January 10, 2014</i></small></h5>
-                                    <p>Excellent feature!</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td>Seller</td>
-                        <td><p><button class="btn btn-warning btn-xs" data-title="Bid" data-target="#bid" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-check"></span></button></p></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="media">
-                                <a href="#" class="pull-left">
-                                    <%= image_tag('books.jpg', class: "media-object") %>
-                                </a>
-                                <div class="media-body">
-                                    <h5 class="media-heading"><a href="">Item Name</a><small><i> starts auctioning on January 10, 2014</i></small></h5>
-                                    <p>Excellent feature!</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td>Seller</td>
-                        <td><p><button class="btn btn-warning btn-xs" data-title="Bid" data-target="#bid" data-placement="top" rel="tooltip"><span class="glyphicon glyphicon-check"></span></button></p></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="media">
-                                <a href="#" class="pull-left">
-                                    <%= image_tag('books.jpg', class: "media-object") %>
-                                </a>
-                                <div class="media-body">
-                                    <h5 class="media-heading"><a href="">Item Name</a><small><i> starts auctioning on January 10, 2014</i></small></h5>
-                                    <p>Excellent feature!</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td>Seller</td>
-                        <td>Sold Out</td>
-                    </tr>
+                    <% end %>
                 </tbody>
             </table>
-            <div class="panel-footer">
-                <div class="row">
-                    <div class="col-md-offset-5 col-md-3">
-                        <h4>Total Count <span class="label label-info">25</span></h4>
-                    </div>
-                    <div class="col-md-4">
-                        <ul class="pagination pull-right">
-                            <li class="disabled"><a href="#">&laquo;</a></li>
-                            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#">&raquo;</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div><!-- content ends -->

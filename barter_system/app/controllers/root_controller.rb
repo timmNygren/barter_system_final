@@ -3,6 +3,7 @@ class RootController < ApplicationController
 	skip_before_action :authenticate_user!
 
 	def index
+		@auctions = Auction.where(available: true)
 	end
 
 	def welcome
