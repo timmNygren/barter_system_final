@@ -2,7 +2,7 @@
 <div class="col-sm-3 col-md-2 sidebar">
     <div id="barter-menu">
         <a href="<%= index_path %>" class="list-group-item active">
-            <span class="glyphicon glyphicon-user"></span> UserName
+            <span class="glyphicon glyphicon-user"></span> <%= current_user.display_name %>
         </a>
         <a href="<%= auctions_url %>" class="list-group-item">
             <span class="glyphicon glyphicon-tower"></span> Your Items
